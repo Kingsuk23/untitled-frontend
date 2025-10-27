@@ -1,15 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import localFont from "next/font/local";
+import "../styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const gilmer = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Gilmer-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Gilmer-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Gilmer-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Gilmer-Heavy.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -23,10 +38,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${gilmer.className} antialiased`}
+    >
+      <body className="overflow-x-hidden bg-bg-primary-default text-base font-normal text-text-primary-default">
         {children}
       </body>
     </html>
