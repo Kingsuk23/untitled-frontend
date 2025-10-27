@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
+import Container from "@/components/container";
+import Navbar from "@/components/navbar";
 
 const gilmer = localFont({
   src: [
@@ -44,6 +46,9 @@ export default function RootLayout({
       className={`${gilmer.className} antialiased`}
     >
       <body className="overflow-x-hidden bg-bg-primary-default text-base font-normal text-text-primary-default">
+        <Container>
+          <Navbar />
+        </Container>
         {children}
       </body>
     </html>
