@@ -5,6 +5,7 @@ import Container from "@/components/container";
 import Navbar from "@/components/navbar";
 
 const gilmer = localFont({
+  preload: true,
   src: [
     {
       path: "../../public/fonts/Gilmer-Regular.woff2",
