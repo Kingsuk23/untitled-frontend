@@ -88,3 +88,35 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.testimonial-container {
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  overflow: hidden;
+}
+
+.scroller {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  animation-direction: reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
