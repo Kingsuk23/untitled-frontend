@@ -71,9 +71,20 @@
   --color-text-primary-focus: var(--blue-600);
   --color-text-secondary-default: var(--grey-800);
   --color-text-error-default: var(--red-700);
-  --color-text-primary-default: var(--black);
+  --color-icon-primary-default: var(--black);
   --color-icon-primary-inverted: var(--white);
   --color-icon-primary-hover: var(--blue-500);
   --color-icon-primary-active: var(--blue-600);
   --color-icon-secondary-default: var(--gray-500);
+
+  --shadow-small: 0 8px 16px rgba(0, 0, 0, 0.17);
+}
+
+.recommendation::-webkit-scrollbar {
+  display: none;
+}
+
+.recommendation {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

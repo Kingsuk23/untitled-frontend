@@ -22,13 +22,13 @@ const About = () => {
         </div>
 
         <div className="flex gap-6">
-          <div className="w-[188px] h-[266px] rounded-xl p-4 flex flex-col justify-between border border-border-primary-default grow shrink-0">
+          <div className="w-[188px] h-[266px] rounded-xl p-4 flex flex-col justify-between border border-border-primary-default grow shrink">
             <h6 className="text-xl leading-[26px] font-bold text-text-primary-default w-[85px]">
               300+ Property
             </h6>
             <PrimaryButton text="View" />
           </div>
-          <div className="w-[188px] h-[266px] rounded-xl p-4 flex flex-col justify-between border border-border-primary-default grow shrink-0">
+          <div className="w-[188px] h-[266px] rounded-xl p-4 flex flex-col justify-between border border-border-primary-default grow shrink">
             <h6 className="text-xl leading-[26px] font-bold text-text-primary-default w-[85px]">
               200+ Closing
             </h6>
@@ -47,7 +47,7 @@ const About = () => {
             loading="lazy"
           />
         </div>
-        <div className="w-[188px] h-[266px] rounded-xl p-4 md:flex flex-col justify-between border border-border-primary-default grow shrink-0 hidden">
+        <div className="w-[188px] h-[266px] rounded-xl p-4 md:flex flex-col justify-between border border-border-primary-default grow shrink hidden">
           <div className=" flex -gap-2">
             <div className="w-6 h-6 rounded-full bg-red-500"></div>
             <div className="w-6 h-6 rounded-full bg-green-500"></div>
