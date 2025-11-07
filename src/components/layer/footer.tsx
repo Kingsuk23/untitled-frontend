@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "./container";
+import Container from "../container";
 import {
   BiLogoFacebookCircle,
   BiLogoInstagramAlt,
@@ -7,7 +7,7 @@ import {
   BiLogoTwitter,
   BiLogoYoutube,
 } from "react-icons/bi";
-import { Paragraph } from "./ui/paragraph";
+import { Paragraph } from "../ui/paragraph";
 
 const Footer = () => {
   return (

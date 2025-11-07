@@ -1,8 +1,8 @@
-import Container from "./container";
-import Button from "./ui/button";
+import Container from "../container";
+import Button from "../ui/button";
 import Image from "next/image";
-import { Heading } from "./ui/heading";
-import { Paragraph } from "./ui/paragraph";
+import { Heading } from "../ui/heading";
+import { Paragraph } from "../ui/paragraph";
 
 const Hero = () => {
   return (

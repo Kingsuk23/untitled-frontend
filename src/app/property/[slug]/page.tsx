@@ -7,7 +7,7 @@ import PropertyInfo from "@/components/propertyInfo";
 import PropertyAdditionalInfo from "@/components/propertyAdditionalInfo";
 import InquiryForm from "@/components/inquiryForm";
 import Smiler from "@/components/smiler";
-import Footer from "@/components/footer";
+import Footer from "@/components/layer/footer";
 import Button from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Paragraph } from "@/components/ui/paragraph";

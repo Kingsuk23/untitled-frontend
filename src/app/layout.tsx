@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
 import Container from "@/components/container";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/layer/navbar";
 
 const gilmer = localFont({
   preload: true,

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Container from "./container";
-import Button from "./ui/button";
-import { Heading } from "./ui/heading";
-import { Paragraph } from "./ui/paragraph";
+import Container from "../container";
+import Button from "../ui/button";
+import { Heading } from "../ui/heading";
+import { Paragraph } from "../ui/paragraph";
 
 const About = () => {
   return (

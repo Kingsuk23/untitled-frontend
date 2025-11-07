@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import Footer from "@/components/footer";
+import Footer from "@/components/layer/footer";
 import Card from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
 import Input from "@/components/ui/input";

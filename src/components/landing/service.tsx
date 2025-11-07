@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Container from "./container";
-import ServiceCard from "./ui/serviceCard";
-import { Heading } from "./ui/heading";
+import Container from "../container";
+import ServiceCard from "../ui/serviceCard";
+import { Heading } from "../ui/heading";
 
 const Service = () => {
   const [selectOption, setSelectOption] = useState<"buy" | "sell" | "rent">(

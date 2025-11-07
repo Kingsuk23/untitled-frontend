@@ -1,9 +1,9 @@
 "use client";
 import { BiSolidChevronLeft, BiSolidChevronRight } from "react-icons/bi";
-import Container from "./container";
-import Card from "./ui/card";
+import Container from "../container";
+import Card from "../ui/card";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Heading } from "./ui/heading";
+import { Heading } from "../ui/heading";
 
 const Recommendation = () => {
   const scrollRef = useRef<HTMLDivElement>(null);

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import Container from "./container";
+import Container from "../container";
 import { useEffect } from "react";
-import { Heading } from "./ui/heading";
-import { Paragraph } from "./ui/paragraph";
+import { Heading } from "../ui/heading";
+import { Paragraph } from "../ui/paragraph";
 
 const Testimonial = () => {
   useEffect(() => {
