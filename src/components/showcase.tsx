@@ -5,6 +5,7 @@ import {
   BiHeart,
   BiShareAlt,
 } from "react-icons/bi";
+import { Paragraph } from "./ui/paragraph";
 
 const Showcase = () => {
   return (
@@ -27,14 +28,14 @@ const Showcase = () => {
             </div>
           </div>
           <div className="px-4 py-2 bg-bg-primary-inverted opacity-70 rounded-4xl absolute bottom-2 right-2">
-            <p className="text-text-primary-inverted  text-xs leading-5">
+            <Paragraph asSpan size="8" color="white">
               1/10
-            </p>
+            </Paragraph>
           </div>
           <div className="px-4 py-2 bg-bg-primary-inverted opacity-70 rounded-4xl absolute bottom-2 left-2 md:hidden">
-            <p className="text-text-primary-inverted  text-xs leading-5">
+            <Paragraph size="8" color="white" asSpan>
               3D View
-            </p>
+            </Paragraph>
           </div>
           <div className="px-2 py-2 bg-bg-primary-inverted opacity-70 rounded-full absolute top-1/2 -translate-y-1/2 left-2 hidden md:block">
             <BiChevronLeft className="text-icon-primary-inverted" size={24} />
@@ -53,9 +54,9 @@ const Showcase = () => {
               className="object-cover"
             />
             <div className="absolute left-2 bottom-2 px-4 py-2 bg-bg-primary-inverted opacity-70 rounded-4xl">
-              <p className="text-text-primary-inverted  text-xs leading-5">
+              <Paragraph size="8" color="white" asSpan>
                 Interior
-              </p>
+              </Paragraph>
             </div>
           </div>
           <div className="relative aspect-92/71 overflow-hidden w-full">
@@ -67,9 +68,9 @@ const Showcase = () => {
               className="object-cover"
             />
             <div className="absolute left-2 bottom-2 px-4 py-2 bg-bg-primary-inverted opacity-70 rounded-4xl">
-              <p className="text-text-primary-inverted  text-xs leading-5">
+              <Paragraph size="8" color="white" asSpan>
                 Bedroom
-              </p>
+              </Paragraph>
             </div>
           </div>
           <div className="relative aspect-92/71 rounded-br-lg overflow-hidden w-full">
@@ -81,9 +82,9 @@ const Showcase = () => {
               className="object-cover"
             />
             <div className="absolute left-2 bottom-2 px-4 py-2 bg-bg-primary-inverted opacity-70 rounded-4xl">
-              <p className="text-text-primary-inverted  text-xs leading-5">
+              <Paragraph size="8" color="white" asSpan>
                 3D
-              </p>
+              </Paragraph>
             </div>
           </div>
         </div>

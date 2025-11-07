@@ -2,6 +2,8 @@
 import Image from "next/image";
 import Container from "./container";
 import { useEffect } from "react";
+import { Heading } from "./ui/heading";
+import { Paragraph } from "./ui/paragraph";
 
 const Testimonial = () => {
   useEffect(() => {
@@ -19,9 +21,9 @@ const Testimonial = () => {
   return (
     <Container>
       <div className="mt-16">
-        <h1 className="font-bold text-[2.5rem] text-center text-text-primary-default">
+        <Heading as="h2" size="2" className="text-center">
           What others say
-        </h1>
+        </Heading>
 
         <div className="pt-8 flex flex-col gap-3 testimonial-container overflow-x-hidden">
           {/* Left-scrolling row */}
@@ -62,13 +64,15 @@ const Card = () => (
           className="rounded-full object-cover"
         />
       </div>
-      <p className="text-base font-medium">Josh</p>
+      <Paragraph asSpan size="2">
+        Josh
+      </Paragraph>
     </div>
-    <p className="text-base text-text-secondary-default">
+    <Paragraph color="gray">
       Prompt delivery and top-notch quality. Impressed with the speed and
       accuracy. The efficiency and speed at which they delivered the product
       were impressive.
-    </p>
+    </Paragraph>
   </div>
 );
 

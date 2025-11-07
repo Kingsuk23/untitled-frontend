@@ -10,8 +10,9 @@ import {
   BiRuler,
 } from "react-icons/bi";
 import MapCard from "./ui/mapCard";
-import SecondaryButton from "./ui/secondaryButton";
-import PrimaryButton from "./ui/primaryButton";
+import Button from "./ui/button";
+import { Heading } from "./ui/heading";
+import { Paragraph } from "./ui/paragraph";
 
 const PropertyInfo = () => {
   return (
@@ -35,15 +36,26 @@ const PropertyInfo = () => {
           </div>
 
           <div className="md:pt-6 flex flex-col gap-4 w-full">
-            <h4 className="text-[2rem] leading-10.5 text-text-primary-default font-bold">
+            <Heading as="h4" size="4">
               $600,00
-            </h4>
-            <p className="text-text-primary-default leading-6 text-base font-normal">
-              2 bed | 1 bath | 620 sqft
-            </p>
-            <p className="text-text-primary-default leading-6 text-base font-normal">
+            </Heading>
+            <Paragraph>
+              <Paragraph asSpan size="2" className="pr-1">
+                2
+              </Paragraph>
+              bed |
+              <Paragraph asSpan size="2" className="px-1">
+                1
+              </Paragraph>
+              bath |
+              <Paragraph asSpan size="2" className="px-1">
+                620
+              </Paragraph>
+              sqft
+            </Paragraph>
+            <Paragraph className="text-text-primary-default leading-6 text-base font-normal">
               3730 103rd St Unit 2, Flushing, NY 11368
-            </p>
+            </Paragraph>
             <div className="flex gap-2 md:hidden">
               <Link
                 href="/"
@@ -63,7 +75,10 @@ const PropertyInfo = () => {
                 </Link>
                 <BiPencil size={24} className="text-icon-primary-default" />
               </div>
-              <SecondaryButton text="Get pre-approved" />
+
+              <Button variant="outline">
+                <span className="relative z-10">Get pre-approved</span>
+              </Button>
             </div>
             <div className="h-10 flex items-center gap-2 px-4 py-2 border border-border-primary-default rounded-xl md:hidden">
               <BiCar size={24} className="text-icon-primary-default" />
@@ -82,14 +97,14 @@ const PropertyInfo = () => {
       <div className="pt-6">
         <div className="flex gap-4">
           <div className="p-2 bg-bg-primary-minimal rounded-3xl">
-            <p className="text-text-primary-default text-xs leading-5 font-normal">
+            <Paragraph asSpan size="8">
               Tennis
-            </p>
+            </Paragraph>
           </div>
           <div className="p-2 bg-bg-primary-minimal rounded-3xl">
-            <p className="text-text-primary-default text-xs leading-5 font-normal">
+            <Paragraph asSpan size="8">
               Pet Allowed
-            </p>
+            </Paragraph>
           </div>
         </div>
 
@@ -97,63 +112,66 @@ const PropertyInfo = () => {
           <div className="inline-flex gap-2 items-center justify-center">
             <BiHome className="text-icon-primary-default" size={24} />
             <div className="flex flex-col">
-              <p className="text-base font-medium leading-5 text-text-primary-default">
+              <Paragraph asSpan size="2">
                 Condo
-              </p>
-              <p className="text-xs font-normal leading-5 text-text-secondary-default">
+              </Paragraph>
+              <Paragraph size="8" asSpan color="gray">
                 Property type
-              </p>
+              </Paragraph>
             </div>
           </div>
           <div className="inline-flex gap-2 items-center justify-center">
             <BiCalendar className="text-icon-primary-default" size={24} />
             <div className="flex flex-col">
-              <p className="text-base font-medium leading-5 text-text-primary-default">
+              <Paragraph asSpan size="2">
                 49 days
-              </p>
-              <p className="text-xs font-normal leading-5 text-text-secondary-default">
+              </Paragraph>
+
+              <Paragraph size="8" asSpan color="gray">
                 On Market
-              </p>
+              </Paragraph>
             </div>
           </div>
           <div className="inline-flex gap-2 items-center justify-center">
             <BiMoneyWithdraw className="text-icon-primary-default" size={24} />
             <div className="flex flex-col">
-              <p className="text-base font-medium leading-5 text-text-primary-default">
+              <Paragraph asSpan size="2">
                 $374/mo
-              </p>
-              <p className="text-xs font-normal leading-5 text-text-secondary-default">
+              </Paragraph>
+              <Paragraph size="8" asSpan color="gray">
                 HOA Fee
-              </p>
+              </Paragraph>
             </div>
           </div>
           <div className="inline-flex gap-2 items-center justify-center">
             <BiRuler className="text-icon-primary-default" size={24} />
             <div className="flex flex-col">
-              <p className="text-base font-medium leading-5 text-text-primary-default">
+              <Paragraph asSpan size="2">
                 $581
-              </p>
-              <p className="text-xs font-normal leading-5 text-text-secondary-default">
+              </Paragraph>
+              <Paragraph size="8" asSpan color="gray">
                 Price Per Sqft
-              </p>
+              </Paragraph>
             </div>
           </div>
           <div className="inline-flex gap-2 items-center justify-center">
             <BiBuilding className="text-icon-primary-default" size={24} />
             <div className="flex flex-col">
-              <p className="text-base font-medium leading-5 text-text-primary-default">
+              <Paragraph asSpan size="2">
                 1988
-              </p>
-              <p className="text-xs font-normal leading-5 text-text-secondary-default">
+              </Paragraph>
+              <Paragraph size="8" asSpan color="gray">
                 Year Build
-              </p>
+              </Paragraph>
             </div>
           </div>
         </div>
 
         <div className="flex gap-6 pt-8">
-          <PrimaryButton text="Contact agent" className="max-md:hidden" />
-          <SecondaryButton text="Share this home" />
+          <Button className="max-md:hidden">Contact agent</Button>
+          <Button variant="outline">
+            <span className="relative z-10">Share this home</span>
+          </Button>
         </div>
       </div>
     </div>

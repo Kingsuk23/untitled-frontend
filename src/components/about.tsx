@@ -1,38 +1,40 @@
 import Image from "next/image";
 import Container from "./container";
-import PrimaryButton from "./ui/primaryButton";
+import Button from "./ui/button";
+import { Heading } from "./ui/heading";
+import { Paragraph } from "./ui/paragraph";
 
 const About = () => {
   return (
     <Container>
       <div className="mt-16 w-full flex flex-col md:flex-row gap-6">
-        <div className="md:w-[80%] h-[266px] p-6 w-full  bg-bg-secondary-default gap-4 text-text-primary-inverted rounded-xl">
-          <div className="px-4 py-2 inline-flex justify-center items-center gap-2 border rounded-3xl">
+        <div className="md:w-[80%] h-[266px] p-6 w-full  bg-bg-secondary-default gap-4 rounded-xl">
+          <div className="px-4 py-2 inline-flex justify-center items-center gap-2 border rounded-3xl border-border-primary-inverted">
             <div className="w-2 h-2 bg-bg-primary-default rounded-full"></div>
-            <p className="text-base leading-6 font-normal">About us</p>
+            <Paragraph color="white">About us</Paragraph>
           </div>
-          <p className="leading-6 text-base font-normal pt-4">
+          <Paragraph color="white" className="pt-4">
             Lorem ipsum dolor sit amet consectetur. At elementum tincidunt nulla
             justo donec ut. Rhoncus porta proin at lectus gravida id nisl ut.
             Orci pretium diam ultricies diam elit. Faucibus nunc mauris mattis
             morbi vitae purus. Suspendisse nunc nunc justo hendrerit aliquam.
             Sed arcu sed malesuada sed arcu enim eget commodo. Cum aliquam
             mollis tellus..
-          </p>
+          </Paragraph>
         </div>
 
         <div className="flex gap-6">
           <div className="w-[188px] h-[266px] rounded-xl p-4 flex flex-col justify-between border border-border-primary-default grow shrink">
-            <h6 className="text-xl leading-[26px] font-bold text-text-primary-default w-[85px]">
+            <Heading as="h6" size="6" className="w-[85px]">
               300+ Property
-            </h6>
-            <PrimaryButton text="View" />
+            </Heading>
+            <Button>View</Button>
           </div>
           <div className="w-[188px] h-[266px] rounded-xl p-4 flex flex-col justify-between border border-border-primary-default grow shrink">
-            <h6 className="text-xl leading-[26px] font-bold text-text-primary-default w-[85px]">
+            <Heading as="h6" size="6" className="w-[85px]">
               200+ Closing
-            </h6>
-            <PrimaryButton text="Search" />
+            </Heading>
+            <Button>Search</Button>
           </div>
         </div>
       </div>
@@ -52,7 +54,7 @@ const About = () => {
             <div className="w-6 h-6 rounded-full bg-red-500"></div>
             <div className="w-6 h-6 rounded-full bg-green-500"></div>
           </div>
-          <PrimaryButton text="View" />
+          <Button>View</Button>
         </div>
       </div>
     </Container>

@@ -5,6 +5,7 @@ import {
 } from "react-icons/bi";
 import Card from "./ui/card";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Heading } from "./ui/heading";
 
 const Smiler = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -45,9 +46,9 @@ const Smiler = () => {
       <div className="flex justify-between items-center">
         <div className="inline-flex gap-2 items-center justify-center">
           <BiHomeHeart size={24} className="text-icon-primary-default" />
-          <h6 className="text-text-primary-default font-bold leading-6.6 text-xl">
+          <Heading as="h6" size="6">
             Smiler houses
-          </h6>
+          </Heading>
         </div>
 
         <div className="flex gap-4">

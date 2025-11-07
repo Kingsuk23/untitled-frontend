@@ -7,6 +7,7 @@ import {
   BiMapPin,
   BiTrendingUp,
 } from "react-icons/bi";
+import { Heading } from "./ui/heading";
 
 const PropertyAdditionalInfo = () => {
   return (
@@ -16,9 +17,9 @@ const PropertyAdditionalInfo = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-2">
             <BiDoorOpen size={24} className="text-icon-primary-default" />
-            <h6 className="text-xl leading-6.5 text-text-primary-default font-bold">
+            <Heading as="h6" size="6">
               Open House
-            </h6>
+            </Heading>
           </div>
           <BiChevronDown
             size={24}
@@ -32,9 +33,9 @@ const PropertyAdditionalInfo = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-2">
             <BiGridAlt size={24} className="text-icon-primary-default" />
-            <h6 className="text-xl leading-6.5 text-text-primary-default font-bold">
+            <Heading as="h6" size="6">
               Property Details
-            </h6>
+            </Heading>
           </div>
           <BiChevronDown
             size={24}
@@ -48,9 +49,9 @@ const PropertyAdditionalInfo = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-2">
             <BiHistory size={24} className="text-icon-primary-default" />
-            <h6 className="text-xl leading-6.5 text-text-primary-default font-bold">
+            <Heading as="h6" size="6">
               Property History
-            </h6>
+            </Heading>
           </div>
           <BiChevronDown
             size={24}
@@ -64,9 +65,9 @@ const PropertyAdditionalInfo = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-2">
             <BiMapPin size={24} className="text-icon-primary-default" />
-            <h6 className="text-xl leading-6.5 text-text-primary-default font-bold">
+            <Heading as="h6" size="6">
               Neighborhood & School
-            </h6>
+            </Heading>
           </div>
           <BiChevronDown
             size={24}
@@ -80,9 +81,9 @@ const PropertyAdditionalInfo = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-2">
             <BiLeaf size={24} className="text-icon-primary-default" />
-            <h6 className="text-xl leading-6.5 text-text-primary-default font-bold">
+            <Heading as="h6" size="6">
               Environment risk
-            </h6>
+            </Heading>
           </div>
           <BiChevronDown
             size={24}
@@ -96,9 +97,9 @@ const PropertyAdditionalInfo = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-2">
             <BiTrendingUp size={24} className="text-icon-primary-default" />
-            <h6 className="text-xl leading-6.5 text-text-primary-default font-bold">
+            <Heading as="h6" size="6">
               Home Value
-            </h6>
+            </Heading>
           </div>
           <BiChevronDown
             size={24}

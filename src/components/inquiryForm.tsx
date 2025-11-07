@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Input from "./ui/input";
-import PrimaryButton from "./ui/primaryButton";
+import Button from "./ui/button";
+import { Heading } from "./ui/heading";
+import { Paragraph } from "./ui/paragraph";
 
 const InquiryForm = () => {
   return (
@@ -9,9 +11,9 @@ const InquiryForm = () => {
         action=""
         className="border border-border-primary-default max-md:rounded-xl rounded-tl-xl rounded-bl-xl p-6 max-md:w-full "
       >
-        <h6 className="text-text-primary-default font-bold text-xl leading-6.5 pb-6">
+        <Heading as="h6" size="6" className="pb-6">
           More about this property
-        </h6>
+        </Heading>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <label
@@ -70,15 +72,17 @@ const InquiryForm = () => {
             />
           </div>
 
-          <PrimaryButton text="Contact agent" type="submit" className="mt-2" />
+          <Button type="submit" className="mt-2">
+            Contact agent
+          </Button>
 
-          <p className="text-xs leading-5 font-normal text-text-secondary-default md:w-[320px] w-full">
+          <Paragraph color="gray" className="md:w-[320px] w-full">
             By proceeding, you consent to receive calls and texts at the number
             you provided, including marketing by autodialer and prerecorded and
             artificial voice, and email, from realtor.com and   about your
             inquiry and other home-related matters, but not as a condition of
             any purchase. 
-          </p>
+          </Paragraph>
         </div>
       </form>
       <div className=" relative w-[37%] aspect-20/19 md:block hidden rounded-tr-xl rounded-br-xl overflow-hidden">

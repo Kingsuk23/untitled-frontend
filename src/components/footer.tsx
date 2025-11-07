@@ -7,6 +7,7 @@ import {
   BiLogoTwitter,
   BiLogoYoutube,
 } from "react-icons/bi";
+import { Paragraph } from "./ui/paragraph";
 
 const Footer = () => {
   return (
@@ -15,10 +16,10 @@ const Footer = () => {
         <div className="pt-16 flex md:flex-row flex-col justify-between">
           <div className="inline-flex flex-col gap-6 items-start  pb-16 md:pb-0">
             <Link href="/">Logo</Link>
-            <p className="text-base leading-6 font-normal w-[320px] wrap">
+            <Paragraph color="white" className="w-[320px] wrap">
               Company name empower teams hlep you choose something batter that
               actual called home
-            </p>
+            </Paragraph>
             <div className="inline-flex gap-4 justify-center items-center">
               <Link href="/" replace>
                 <BiLogoFacebookCircle size={24} />
@@ -39,7 +40,9 @@ const Footer = () => {
           </div>
           <div className="flex gap-14 items-center flex-wrap">
             <div className="flex gap-8 flex-col items-start justify-center shrink-0">
-              <p className="text-lg font-medium leading-6">Product</p>
+              <Paragraph color="white" size="1">
+                Product
+              </Paragraph>
               <div className="flex gap-6 flex-col items-start justify-center">
                 <Link href="/" className="text-base font-normal leading-6">
                   Feature
@@ -56,7 +59,9 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex gap-8 flex-col items-start justify-center shrink-0">
-              <p className="text-lg font-medium leading-6">Product</p>
+              <Paragraph color="white" size="1">
+                Product
+              </Paragraph>
               <div className="flex gap-6 flex-col items-start justify-center">
                 <Link href="/" className="text-base font-normal leading-6">
                   Feature
@@ -73,7 +78,9 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex gap-8 flex-col items-start justify-center shrink-0">
-              <p className="text-lg font-medium leading-6">Product</p>
+              <Paragraph color="white" size="1">
+                Product
+              </Paragraph>
               <div className="flex gap-6 flex-col items-start justify-center">
                 <Link href="/" className="text-base font-normal leading-6">
                   Feature
@@ -94,9 +101,9 @@ const Footer = () => {
         <hr className="mt-8" />
 
         <div className="py-4 flex flex-col md:flex-row md:row md:justify-between gap-2 justify-center items-center">
-          <p className="text-base font-normal leading-6">
+          <Paragraph color="white">
             &copy; {new Date().getFullYear()} name. All right reserved
-          </p>
+          </Paragraph>
           <div className="flex gap-2">
             <Link href="/" className="text-base font-normal leading-6">
               Privacy Policy

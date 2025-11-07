@@ -1,23 +1,31 @@
 import Container from "./container";
-import PrimaryButton from "./ui/primaryButton";
-import SecondaryButton from "./ui/secondaryButton";
+import Button from "./ui/button";
 import Image from "next/image";
+import { Heading } from "./ui/heading";
+import { Paragraph } from "./ui/paragraph";
 
 const Hero = () => {
   return (
     <Container>
       <div className="mt-16 ">
-        <h1 className="font-bold text-text-primary-default text-5xl leading-[58px] text-center">
+        <Heading className="text-center">
           Find Your <span className="text-text-primary-hover">Perfect </span>
           Home Today
-        </h1>
-        <p className="max-w-[606px] text-center text-base font-normal text-text-secondary-default pt-8 leading-6 mx-auto">
+        </Heading>
+        <Paragraph
+          color="gray"
+          className="pt-8 max-w-[606px] text-center mx-auto "
+        >
           Explore verified listings, transparent pricing, and expert
           guidance—everything you need to make your next move confidently.
-        </p>
+        </Paragraph>
 
         <div className="flex gap-6 justify-center items-center pt-6">
-          <PrimaryButton text="Search" /> <SecondaryButton text="Contact us" />
+          <Button>Search</Button>
+
+          <Button variant="outline">
+            <span className="relative z-10">Contact us</span>
+          </Button>
         </div>
 
         <div className="mt-16 relative rounded-lg w-full flex overflow-hidden ">

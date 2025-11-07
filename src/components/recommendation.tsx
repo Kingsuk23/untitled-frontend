@@ -3,6 +3,7 @@ import { BiSolidChevronLeft, BiSolidChevronRight } from "react-icons/bi";
 import Container from "./container";
 import Card from "./ui/card";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Heading } from "./ui/heading";
 
 const Recommendation = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -42,9 +43,9 @@ const Recommendation = () => {
     <Container>
       <div className="mt-16">
         <div className="flex justify-between items-center">
-          <h1 className="text-text-primary-default font-bold leading-12 text-[2.5rem]">
+          <Heading as="h2" size="2">
             Recommended for you
-          </h1>
+          </Heading>
           <div className="flex gap-4">
             <button
               onClick={() => scroll("left")}

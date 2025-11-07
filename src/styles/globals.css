@@ -61,9 +61,11 @@
   --color-button-primary-hover: var(--blue-600);
   --color-button-primary-focus: var(--blue-600);
   --color-border-primary-default: var(--grey-400);
+  --color-border-secondary-default: var(--blue-400);
   --color-border-primary-inverted: var(--white);
   --color-border-error-default: var(--red-500);
   --color-border-primary-hover: var(--blue-400);
+  --color-border-primary-focus: var(--blue-400);
   --color-text-primary-default: var(--black);
   --color-text-primary-inverted: var(--white);
   --color-text-primary-disable: var(--grey-600);

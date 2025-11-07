@@ -8,16 +8,19 @@ import PropertyAdditionalInfo from "@/components/propertyAdditionalInfo";
 import InquiryForm from "@/components/inquiryForm";
 import Smiler from "@/components/smiler";
 import Footer from "@/components/footer";
-import PrimaryButton from "@/components/ui/primaryButton";
-import SecondaryButton from "@/components/ui/secondaryButton";
+import Button from "@/components/ui/button";
+import { Heading } from "@/components/ui/heading";
+import { Paragraph } from "@/components/ui/paragraph";
 
 const PropertyDetails = () => {
   const router = useRouter();
   return (
     <>
       <div className="md:hidden fixed bottom-0 left-0 w-full z-50 py-4 bg-bg-primary-default flex gap-2 px-2 border-t border-border-primary-default">
-        <PrimaryButton text="Schedule Tour" className="w-1/2" />
-        <SecondaryButton text="contact agent" className="w-1/2" />
+        <Button className="w-1/2">Schedule Tour</Button>
+        <Button className="w-1/2" variant="outline">
+          <span className="relative z-10">Schedule Tour</span>
+        </Button>
       </div>
       <Container>
         <div className="mt-4 justify-between md:flex hidden items-center">
@@ -26,9 +29,7 @@ const PropertyDetails = () => {
             onClick={() => router.back()}
           >
             <BiChevronLeft className="text-icon-primary-default" size={24} />
-            <p className="underline text-base text-text-primary-default leading-6">
-              Back
-            </p>
+            <Paragraph className="underline">Back</Paragraph>
           </button>
           <div className="md:inline-flex gap-4 hidden">
             <div className="h-9 w-9 border rounded-full border-border-primary-default justify-center flex items-center cursor-pointer hover:bg-bg-primary-minimal">
@@ -46,36 +47,33 @@ const PropertyDetails = () => {
             <PropertyAdditionalInfo />
           </div>
           <div className="sticky top-4 left-0 rounded-xl border border-border-primary-default p-4 hidden md:block mt-4 h-fit w-[25%]">
-            <h5 className="text-[1.75rem] leading-9 text-text-primary-default font-bold">
+            <Heading as="h5" size="5">
               Schedule tour
-            </h5>
-            <p className="pt-2 leading-6 text-base text-text-secondary-default ">
+            </Heading>
+            <Paragraph color="gray" className="pt-2">
               your tour in your preferred date
-            </p>
+            </Paragraph>
 
             <div className="pt-6 flex flex-col gap-2">
-              <p className="leading-6 text-base text-text-primary-default">
-                Jane Cooper
-              </p>
-              <p className="leading-6 text-base text-text-primary-default">
-                8558 Green Rd.
-              </p>
+              <Paragraph>Jane Cooper</Paragraph>
+              <Paragraph>8558 Green Rd.</Paragraph>
             </div>
 
-            <PrimaryButton text="Schedule tour" className="mt-6 w-full" />
-
+            <Button className="mt-6 w-full">Schedule Tour</Button>
             <hr className="mt-4 mb-2 rounded-lg border-border-primary-default" />
-            <h6 className="text-xl leading-6.5 text-text-primary-default font-bold">
+            <Heading as="h6" size="6">
               More about this property
-            </h6>
-            <SecondaryButton text="Contact agent" className="w-full mt-4" />
-            <p className="text-xs leading-5 font-normal text-text-secondary-default w-full pt-4">
+            </Heading>
+            <Button className="w-full mt-4" variant="outline">
+              <span className="relative z-10"> Contact agent</span>
+            </Button>
+            <Paragraph size="8" color="gray" className="w-full pt-4">
               By proceeding, you consent to receive calls and texts at the
               number you provided, including marketing by autodialer and
               prerecorded and artificial voice, and email, from realtor.com and 
                about your inquiry and other home-related matters, but not as a
               condition of any purchase. 
-            </p>
+            </Paragraph>
           </div>
         </div>
         <InquiryForm />

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Container from "./container";
 import ServiceCard from "./ui/serviceCard";
+import { Heading } from "./ui/heading";
 
 const Service = () => {
   const [selectOption, setSelectOption] = useState<"buy" | "sell" | "rent">(
@@ -17,9 +18,9 @@ const Service = () => {
   return (
     <Container>
       <div className="mt-16">
-        <h1 className="leading-12 font-bold text-[2.5rem] text-text-primary-default">
+        <Heading as="h2" size="2">
           Discover how we can help
-        </h1>
+        </Heading>
 
         <div className="pt-6 flex gap-2">
           <button

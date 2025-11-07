@@ -1,7 +1,9 @@
 import Container from "@/components/container";
 import Footer from "@/components/footer";
 import Card from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
 import Input from "@/components/ui/input";
+import { Paragraph } from "@/components/ui/paragraph";
 import {
   BiChevronDown,
   BiChevronLeft,
@@ -27,37 +29,27 @@ const Property = () => {
           </div>
 
           <div className="md:flex hidden justify-center items-center gap-2 rounded-lg border border-border-primary-default px-4 py-2 cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-default">
-              For Sale
-            </p>
+            <Paragraph>For Sale</Paragraph>
             <BiChevronDown size={24} className="text-icon-primary-default" />
           </div>
 
           <div className="md:flex hidden justify-center items-center gap-2 rounded-lg border border-border-primary-default px-4 py-2 cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-default">
-              Price
-            </p>
+            <Paragraph>Price</Paragraph>
             <BiChevronDown size={24} className="text-icon-primary-default" />
           </div>
 
           <div className="md:flex hidden justify-center items-center gap-2 rounded-lg border border-border-primary-default px-4 py-2 cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-default">
-              Beds & Baths
-            </p>
+            <Paragraph>Beds & Baths</Paragraph>
             <BiChevronDown size={24} className="text-icon-primary-default" />
           </div>
 
           <div className="md:flex hidden justify-center items-center gap-2 rounded-lg border border-border-primary-default px-4 py-2 cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-default">
-              Home Type
-            </p>
+            <Paragraph>Home Type</Paragraph>
             <BiChevronDown size={24} className="text-icon-primary-default" />
           </div>
 
           <div className="flex justify-center items-center gap-2 rounded-lg border border-border-primary-default px-4 py-2 cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-default">
-              More
-            </p>
+            <Paragraph>More</Paragraph>
             <BiChevronDown size={24} className="text-icon-primary-default" />
           </div>
         </div>
@@ -71,17 +63,13 @@ const Property = () => {
             ></iframe>
           </div>
           <div className="md:w-[53%] w-full">
-            <h5 className="text-2xl font-bold text-text-primary-default">
+            <Heading as="h5" size="5">
               Real Estate & Homes For Sale
-            </h5>
+            </Heading>
             <div className=" flex justify-between items-center pt-4">
-              <p className="text-text-secondary-default leading-6 text-base font-normal">
-                520 Result
-              </p>
+              <Paragraph>520 Result</Paragraph>
               <div className="flex gap-2 justify-between items-center">
-                <p className="text-text-primary-default leading-6 text-base font-normal">
-                  Sort: Home for you
-                </p>
+                <Paragraph>Sort: Home for you</Paragraph>
                 <BiChevronDown
                   size={24}
                   className="text-icon-primary-default"
@@ -106,19 +94,19 @@ const Property = () => {
             <BiChevronLeft size={24} className="text-icon-primary-default" />
           </div>
           <div className="bg-bg-primary-minimal w-12 h-12 rounded-full flex justify-center items-center cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-default">
+            <Paragraph size="2" asSpan>
               1
-            </p>
+            </Paragraph>
           </div>
           <div className="bg-bg-secondary-default w-12 h-12 rounded-full flex justify-center items-center cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-inverted">
+            <Paragraph size="2" asSpan color="white">
               2
-            </p>
+            </Paragraph>
           </div>
           <div className="bg-bg-primary-minimal w-12 h-12 rounded-full flex justify-center items-center cursor-pointer">
-            <p className="text-base leading-5 font-medium text-text-primary-default">
+            <Paragraph size="2" asSpan>
               3
-            </p>
+            </Paragraph>
           </div>
           <div className="bg-bg-primary-minimal w-12 h-12 rounded-full flex justify-center items-center cursor-pointer">
             <BiChevronRight size={24} className="text-icon-primary-default" />

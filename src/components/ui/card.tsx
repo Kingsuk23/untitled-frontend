@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
+import { Heading } from "./heading";
+import { Paragraph } from "./paragraph";
 
 interface CardProps {
   className?: string;
@@ -25,21 +27,21 @@ const Card: React.FC<CardProps> = ({ className }) => {
       </div>
 
       <div className="pt-2 flex px-4 justify-between items-center">
-        <h6 className="text-xl leading-[26px] font-bold text-text-primary-default">
+        <Heading as="h6" size="6">
           $912,00
-        </h6>
+        </Heading>
         <BiDotsHorizontalRounded
           size={24}
           className="text-icon-primary-default"
         />
       </div>
 
-      <p className="text-sm leading-4 text-text-secondary-default font-medium py-2 px-4">
+      <Paragraph className="py-2 px-4" size="3" color="gray">
         2 bed | 1 baths | 1,000 ft
-      </p>
-      <p className="text-xs leading-4 text-text-secondary-default font-medium px-4">
+      </Paragraph>
+      <Paragraph className="px-4" size="4" color="gray">
         4140 Parker Rd. Allentown, New Mexico 31134
-      </p>
+      </Paragraph>
     </div>
   );
 };
