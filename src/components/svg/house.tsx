@@ -3,6 +3,8 @@ const House = ({ ...props }: React.ComponentProps<"svg">) => (
     xmlns="http://www.w3.org/2000/svg"
     data-testid="spot-claim-home"
     viewBox="0 0 48 48"
+    width={48}
+    height={48}
     {...props}
   >
     <path fill="#fff" d="M29 17.5V5l4-1 5 1.5 3 .5 4-.5V18l-5 1-6.5-2-4.5.5Z" />

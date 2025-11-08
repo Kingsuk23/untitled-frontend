@@ -1,8 +1,10 @@
-const moneyBadge = ({ ...props }: React.ComponentProps<"svg">) => (
+const MoneyBadge = ({ ...props }: React.ComponentProps<"svg">) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     data-testid="spot-badge-cash-reward"
     viewBox="0 0 48 48"
+    width={48}
+    height={48}
     {...props}
   >
     <path
@@ -19,4 +21,4 @@ const moneyBadge = ({ ...props }: React.ComponentProps<"svg">) => (
   </svg>
 );
 
-export default moneyBadge;
+export default MoneyBadge;

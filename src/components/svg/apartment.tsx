@@ -3,6 +3,8 @@ const Apartment = ({ ...props }: React.ComponentProps<"svg">) => (
     xmlns="http://www.w3.org/2000/svg"
     data-testid="spot-condo"
     viewBox="0 0 48 48"
+    width={48}
+    height={48}
     {...props}
   >
     <path fill="#fff" d="M28 13h13.023A3.977 3.977 0 0 1 45 16.977V44H28V13Z" />

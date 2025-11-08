@@ -4,6 +4,7 @@ import Container from "../container";
 import { useEffect } from "react";
 import { Heading } from "../ui/heading";
 import { Paragraph } from "../ui/paragraph";
+import { Card, CardContent, CardHeader } from "../ui/card";
 
 const Testimonial = () => {
   useEffect(() => {
@@ -28,22 +29,15 @@ const Testimonial = () => {
         <div className="pt-8 flex flex-col gap-3 testimonial-container overflow-x-hidden">
           {/* Left-scrolling row */}
           <div className=" scroller" data-direction="left">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <TestimonialCard />
+            <TestimonialCard /> <TestimonialCard /> <TestimonialCard />
+            <TestimonialCard />
           </div>
 
           {/* Right-scrolling row */}
           <div className="scroller" data-direction="right">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <TestimonialCard /> <TestimonialCard /> <TestimonialCard />
+            <TestimonialCard /> <TestimonialCard />
           </div>
         </div>
       </div>
@@ -51,29 +45,29 @@ const Testimonial = () => {
   );
 };
 
-const Card = () => (
-  <div className="w-[400px] h-48 border border-border-primary-default rounded-xl p-4 flex flex-col gap-4 shrink-0">
-    <div className="inline-flex gap-2 items-center">
-      <div className="w-8 h-8 rounded-full relative shrink-0">
-        <Image
-          src="/images/building-4579244.jpg"
-          alt="profile pic"
-          fill
-          sizes="48px"
-          loading="lazy"
-          className="rounded-full object-cover"
-        />
-      </div>
+const TestimonialCard = () => (
+  <Card className="w-[400px] h-48 p-4 flex flex-col gap-4 shrink-0">
+    <CardHeader className="inline-flex gap-2 items-center">
+      <Image
+        src="/images/building-4579244.jpg"
+        alt="profile pic"
+        width={32}
+        height={32}
+        loading="lazy"
+        className="rounded-full w-8 h-8"
+      />
       <Paragraph asSpan size="2">
         Josh
       </Paragraph>
-    </div>
-    <Paragraph color="gray">
-      Prompt delivery and top-notch quality. Impressed with the speed and
-      accuracy. The efficiency and speed at which they delivered the product
-      were impressive.
-    </Paragraph>
-  </div>
+    </CardHeader>
+    <CardContent>
+      <Paragraph color="gray">
+        Prompt delivery and top-notch quality. Impressed with the speed and
+        accuracy. The efficiency and speed at which they delivered the product
+        were impressive.
+      </Paragraph>
+    </CardContent>
+  </Card>
 );
 
 export default Testimonial;

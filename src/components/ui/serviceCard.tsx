@@ -1,28 +1,27 @@
-import Image from "next/image";
 import { Paragraph } from "./paragraph";
 import { Heading } from "./heading";
+import { FC, SVGProps } from "react";
+import { Card, CardContent, CardHeader } from "./card";
 
 interface serviceCardProps {
-  Heading: string;
-  Paragraph: string;
-  icon: string;
+  title: string;
+  subtitle: string;
+  Icon: FC<SVGProps<SVGSVGElement>>;
 }
 
-const ServiceCard: React.FC<serviceCardProps> = ({
-  Heading: HeadingText,
-  Paragraph: ParagraphText,
-  icon,
-}) => {
+const ServiceCard: React.FC<serviceCardProps> = ({ title, subtitle, Icon }) => {
   return (
-    <div className="w-[400px] md:h-[180px] p-4 border border-border-primary-default rounded-xl flex flex-col gap-2 hover:border-border-primary-hover cursor-pointer shrink grow h-fit">
-      <div className="flex justify-between  items-center">
-        <Heading as="h6" size="6" className="text-lg w-[255px]">
-          {HeadingText}
+    <Card className="w-[400px] md:h-[180px] p-4 flex flex-col gap-2 hover:border-border-primary-hover cursor-pointer shrink grow h-fit">
+      <CardHeader className="flex justify-between items-center">
+        <Heading as="h6" size="6">
+          {title}
         </Heading>
-        <Image alt="icon" src={icon} width={48} height={48} loading="lazy" />
-      </div>
-      <Paragraph color="gray">{ParagraphText}</Paragraph>
-    </div>
+        <Icon />
+      </CardHeader>
+      <CardContent>
+        <Paragraph color="gray">{subtitle}</Paragraph>
+      </CardContent>
+    </Card>
   );
 };
 

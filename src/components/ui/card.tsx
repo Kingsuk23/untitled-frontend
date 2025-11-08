@@ -1,49 +1,82 @@
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { BiDotsHorizontalRounded } from "react-icons/bi";
-import { Heading } from "./heading";
-import { Paragraph } from "./paragraph";
 
-interface CardProps {
-  className?: string;
-}
-
-const Card: React.FC<CardProps> = ({ className }) => {
+const Card = ({ className, ...props }: React.ComponentProps<"div">) => {
   return (
     <div
+      data-slot="card"
       className={cn(
-        "w-[320px] h-fit rounded-xl border border-border-primary-default shadow-small shrink-0 cursor-pointer pb-4 overflow-hidden",
+        "rounded-lg border border-border-primary-default bg-bg-primary-default",
         className
       )}
-    >
-      <div className="w-full h-[225px] relative rounded-tr-xl rounded-tl-xl">
-        <Image
-          src="/images/furniture-2660938.jpg"
-          alt="Interior"
-          loading="lazy"
-          fill
-          className=" object-cover"
-        />
-      </div>
-
-      <div className="pt-2 flex px-4 justify-between items-center">
-        <Heading as="h6" size="6">
-          $912,00
-        </Heading>
-        <BiDotsHorizontalRounded
-          size={24}
-          className="text-icon-primary-default"
-        />
-      </div>
-
-      <Paragraph className="py-2 px-4" size="3" color="gray">
-        2 bed | 1 baths | 1,000 ft
-      </Paragraph>
-      <Paragraph className="px-4" size="4" color="gray">
-        4140 Parker Rd. Allentown, New Mexico 31134
-      </Paragraph>
-    </div>
+      {...props}
+    />
   );
 };
 
-export default Card;
+const CardHeader = ({ className, ...props }: React.ComponentProps<"div">) => {
+  return (
+    <div data-slot="card-header" className={cn("", className)} {...props} />
+  );
+};
+
+const CardTitle = ({ className, ...props }: React.ComponentProps<"div">) => {
+  return (
+    <div
+      data-slot="card-title"
+      className={cn("leading-none font-semibold", className)}
+      {...props}
+    />
+  );
+};
+
+const CardDescription = ({
+  className,
+  ...props
+}: React.ComponentProps<"div">) => {
+  return (
+    <div
+      data-slot="card-description"
+      className={cn("text-muted-foreground text-sm", className)}
+      {...props}
+    />
+  );
+};
+
+const CardAction = ({ className, ...props }: React.ComponentProps<"div">) => {
+  return (
+    <div
+      data-slot="card-action"
+      className={cn(
+        "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
+        className
+      )}
+      {...props}
+    />
+  );
+};
+
+const CardContent = ({ className, ...props }: React.ComponentProps<"div">) => {
+  return (
+    <div data-slot="card-content" className={cn("", className)} {...props} />
+  );
+};
+
+const CardFooter = ({ className, ...props }: React.ComponentProps<"div">) => {
+  return (
+    <div
+      data-slot="card-footer"
+      className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
+      {...props}
+    />
+  );
+};
+
+export {
+  Card,
+  CardTitle,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+};

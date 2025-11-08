@@ -1,13 +1,15 @@
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Container from "@/components/container";
 import Footer from "@/components/layer/footer";
-import Card from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
 import Input from "@/components/ui/input";
 import { Paragraph } from "@/components/ui/paragraph";
+import Image from "next/image";
 import {
   BiChevronDown,
   BiChevronLeft,
   BiChevronRight,
+  BiHeart,
   BiSearch,
 } from "react-icons/bi";
 
@@ -77,15 +79,98 @@ const Property = () => {
               </div>
             </div>
             <div className="pt-8 flex flex-wrap gap-2">
-              <Card className="shrink grow " />
-              <Card className="shrink grow " />{" "}
-              <Card className="shrink grow " />{" "}
-              <Card className="shrink grow " />{" "}
-              <Card className="shrink grow " />{" "}
-              <Card className="shrink grow " />{" "}
-              <Card className="shrink grow " />{" "}
-              <Card className="shrink grow " />{" "}
-              <Card className="shrink grow " />
+              <Card className="w-[320px] h-fit cursor-pointer shadow-small overflow-hidden shrink grow">
+                <CardHeader className="relative w-full h-[200px] ">
+                  <Image
+                    src="/images/furniture-2660938.jpg"
+                    alt="Interior"
+                    fill
+                    loading="lazy"
+                    className="object-cover"
+                  />
+                  <div className="flex absolute top-2 left-2 gap-2">
+                    <Paragraph
+                      asSpan
+                      size="3"
+                      color="white"
+                      className="bg-bg-secondary-default p-2 rounded-2xl inline"
+                    >
+                      New
+                    </Paragraph>
+                  </div>
+                  <div className="p-2 bg-bg-primary-default rounded-full absolute bottom-2 right-2 hover:opacity-75 transition-all duration-300 focus-visible:opacity-75">
+                    <BiHeart size={20} />
+                  </div>
+                </CardHeader>
+                <CardContent className="p-2 flex flex-col gap-2">
+                  <Heading as="h5" size="5">
+                    $912,00
+                  </Heading>
+                  <Paragraph size="7" color="gray">
+                    <span className="text-sm font-extrabold text-text-primary-default pr-1">
+                      2
+                    </span>
+                    bed |
+                    <span className="text-sm font-extrabold text-text-primary-default px-1">
+                      1
+                    </span>
+                    baths |
+                    <span className="text-sm font-extrabold text-text-primary-default px-1">
+                      1,000
+                    </span>
+                    ft
+                  </Paragraph>
+                  <Paragraph size="7" color="gray">
+                    4140 Parker Rd. Allentown, New Mexico 31134
+                  </Paragraph>
+                </CardContent>
+              </Card>
+              <Card className="md:w-[320px] w-full h-fit cursor-pointer shadow-small overflow-hidden shrink grow">
+                <CardHeader className="relative w-full h-[200px]">
+                  <Image
+                    src="/images/furniture-2660938.jpg"
+                    alt="Interior"
+                    fill
+                    loading="lazy"
+                    className="object-cover"
+                  />
+                  <div className="flex absolute top-2 left-2 gap-2">
+                    <Paragraph
+                      asSpan
+                      size="3"
+                      color="white"
+                      className="bg-bg-secondary-default p-2 rounded-2xl inline"
+                    >
+                      New
+                    </Paragraph>
+                  </div>
+                  <div className="p-2 bg-bg-primary-default rounded-full absolute bottom-2 right-2 hover:opacity-75 transition-all duration-300 focus-visible:opacity-75">
+                    <BiHeart size={20} />
+                  </div>
+                </CardHeader>
+                <CardContent className="p-2 flex flex-col gap-2">
+                  <Heading as="h5" size="5">
+                    $912,00
+                  </Heading>
+                  <Paragraph size="7" color="gray">
+                    <span className="text-sm font-extrabold text-text-primary-default pr-1">
+                      2
+                    </span>
+                    bed |
+                    <span className="text-sm font-extrabold text-text-primary-default px-1">
+                      1
+                    </span>
+                    baths |
+                    <span className="text-sm font-extrabold text-text-primary-default px-1">
+                      1,000
+                    </span>
+                    ft
+                  </Paragraph>
+                  <Paragraph size="7" color="gray">
+                    4140 Parker Rd. Allentown, New Mexico 31134
+                  </Paragraph>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
