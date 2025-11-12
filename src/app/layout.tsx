@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "../styles/globals.css";
 import Container from "@/components/container";
 import Navbar from "@/components/layer/navbar";
+import QueryProvider from "@/provider/queryProvider";
+import { Toaster } from "react-hot-toast";
 
 const gilmer = localFont({
   preload: true,
@@ -47,10 +49,11 @@ export default function RootLayout({
       className={`${gilmer.className} antialiased`}
     >
       <body className="overflow-x-hidden bg-bg-primary-default text-base font-normal text-text-primary-default">
+        <Toaster />
         <Container>
           <Navbar />
         </Container>
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );

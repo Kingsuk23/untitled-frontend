@@ -8,10 +8,13 @@ import {
   BiLogoYoutube,
 } from "react-icons/bi";
 import { Paragraph } from "../ui/paragraph";
+import { cn } from "@/lib/utils";
 
 const Footer = () => {
   return (
-    <footer className="mt-16 bg-bg-secondary-default text-text-primary-inverted">
+    <footer
+      className={cn("bg-bg-secondary-default text-text-primary-inverted")}
+    >
       <Container>
         <div className="pt-16 flex md:flex-row flex-col justify-between">
           <div className="inline-flex flex-col gap-6 items-start  pb-16 md:pb-0">

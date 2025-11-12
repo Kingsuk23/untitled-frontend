@@ -3,6 +3,7 @@ import Button from "../ui/button";
 import Image from "next/image";
 import { Heading } from "../ui/heading";
 import { Paragraph } from "../ui/paragraph";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -21,10 +22,14 @@ const Hero = () => {
         </Paragraph>
 
         <div className="flex gap-6 justify-center items-center pt-6">
-          <Button>Search</Button>
+          <Button asChild>
+            <Link href="/property">Search</Link>
+          </Button>
 
           <Button variant="outline">
-            <span className="relative z-10">Contact us</span>
+            <Link className="relative z-10" href="/contact">
+              Contact us
+            </Link>
           </Button>
         </div>
 
